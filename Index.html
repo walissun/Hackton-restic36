@@ -5,21 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Planejador de rotas para Salvador, projetado para ser responsivo e eficiente.">
   <title>Planejador de Rotas - Salvador</title>
-
-  <!-- Estilos e Leaflet -->
   <link rel="stylesheet" href="styles.css">
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
-  <!-- Mapa -->
-  <div id="map"></div>
-
-  <!-- Formulário de Rotas -->
+  <div id="map" role="application" aria-label="Mapa de rotas"></div>
   <div id="form-container">
-    <form id="routePlannerForm">
+    <form id="routePlannerForm" aria-labelledby="routePlannerFormLabel">
       <div class="form-group">
         <label for="origin">Origem:</label>
         <input type="text" id="origin" placeholder="Digite o local de partida" required>
@@ -28,39 +20,21 @@
         <label for="destination">Destino:</label>
         <input type="text" id="destination" placeholder="Digite o local de destino" required>
       </div>
-      <button type="button" id="openModal">Selecionar Modal</button>
+      <div class="form-group">
+        <label for="transportMode">Modo de Transporte:</label>
+        <select id="transportMode" name="transportMode" aria-label="Modo de Transporte">
+          <option value="foot">🚶 A pé</option>
+          <option value="bike">🚴 Bicicleta</option>
+          <option value="car">🚗 Veículo</option>
+        </select>
+      </div>
       <button type="submit">Calcular Rota</button>
     </form>
   </div>
-
-  <!-- Modal para Seleção de Modal -->
-  <div id="transportModal" class="modal">
-    <div class="modal-content">
-      <h3>Escolha o Modal de Transporte</h3>
-      <div class="transport-options">
-        <button class="transport-option" data-mode="walking">🚶 A pé</button>
-        <button class="transport-option" data-mode="bicycling">🚴 Bicicleta</button>
-        <button class="transport-option" data-mode="driving">🚗 Veículo</button>
-        <button class="transport-option" data-mode="bus">🚌 Ônibus</button>
-        <button class="transport-option" data-mode="subway">🚇 Metrô</button>
-        <button class="transport-option" data-mode="brt">🚍 BRT</button>
-        <button class="transport-option" data-mode="vlt">🚈 VLT</button>
-      </div>
-      <button id="closeModal" class="close-modal">Fechar</button>
-    </div>
-  </div>
-
-  <!-- Botões Flutuantes -->
   <div id="floating-buttons">
-    <button class="floating-button" onclick="locateUser()" aria-label="Localizar">
-      📍
-    </button>
-    <button class="floating-button" onclick="resetMap()" aria-label="Resetar">
-      🔄
-    </button>
+    <button class="floating-button" id="locateUserButton" aria-label="Localizar">📍</button>
+    <button class="floating-button" id="resetMapButton" aria-label="Resetar">🔄</button>
   </div>
-
-  <!-- Scripts -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
   <script src="script.js"></script>
