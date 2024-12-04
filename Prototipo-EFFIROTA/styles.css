@@ -1,0 +1,143 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  overflow: hidden;
+}
+
+/* Mapa */
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+  }
+  
+
+/* Formulário */
+#form-container {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+form select {
+  background: #fff;
+  cursor: pointer;
+}
+
+form button {
+  background: #0078d7;
+  color: #fff;
+  border: none;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #005bb5;
+}
+
+/* Botões flutuantes */
+#floating-buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 2000; 
+}
+
+
+.floating-button {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.floating-button:hover {
+  background: #f0f0f0;
+}
+
+/* Personalização da Leaflet Routing Machine */
+.leaflet-routing-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.8); /* Fundo mais opaco */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  z-index: 1000;
+  overflow: hidden;
+  resize: both; /* Permite redimensionamento */
+}
+
+/* Ajuste do texto dentro da div de roteamento */
+.leaflet-routing-container h3,
+.leaflet-routing-container p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #form-container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-group label {
+    display: none; /* Esconde os rótulos */
+  }
+
+  form input,
+  form select,
+  form button {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}
