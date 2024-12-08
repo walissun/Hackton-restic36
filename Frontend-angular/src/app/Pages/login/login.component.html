@@ -1,5 +1,11 @@
 <section class="login-container">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+      <div class="infologin">
+        <p>utilize essas informações para fazer login: <br> usuario: root <br> senha: root000</p>
+     
+
+   </div>
       <h2>Login</h2>
   
       <div class="form-group">
@@ -15,7 +21,7 @@
           Usuário é obrigatório.
         </div>
       </div>
-  
+      
       <div class="form-group">
         <label for="password">Senha</label>
         <input
@@ -31,7 +37,35 @@
       </div>
   
       <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Entrar</button>
-
+      
+  
       <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+      <div class="form-group-authentication">
+
+        <div class="google">
+          <img class="imggoogle" src="/img-login/google.png" alt="1">
+          <p>entre com sua conta google</p>
+        </div>
+
+        <div class="linkedin">
+          <img class="imglinkedin" src="/img-login/linkedin.png" alt="2">
+          <p>entre com sua conta linkedin</p>
+        </div>
+
+        <div class="git">
+          <img class="imggithub" src="/img-login/github.png" alt="3">
+          <p>entre com sua conta linkedin</p>
+
+        </div>
+        <p>esqueci a senha</p>
+
+      </div>
+
+      <div class="help">
+        
+      </div>
+
+      
     </form>
   </section>

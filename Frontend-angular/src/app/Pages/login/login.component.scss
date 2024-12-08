@@ -13,12 +13,17 @@
     }
   
     .form-group {
+      display: flex;
       margin-bottom: 15px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
   
       label {
         display: block;
         margin-bottom: 5px;
         font-weight: bold;
+        font-size: 20px;
       }
   
       .form-control {
@@ -55,4 +60,63 @@
       text-align: center;
       margin-top: 15px;
     }
+  }
+
+  .form-group-authentication{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 8px;
+  }
+
+  .infologin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: solid rgb(0, 174, 255) 1px;
+    border-radius: 5px;
+  }
+
+  .google{
+    border: solid rgb(0, 174, 255) 1px;
+    width: 398px;
+    height: 32px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .imggoogle{
+    width: 20px;
+    margin-right: 20px;
+  }
+  .linkedin{
+    border: solid rgb(0, 174, 255) 1px;
+    width: 398px;
+    height: 32px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .imglinkedin{
+    width: 20px;
+    margin-right: 20px;
+  }
+  .git{
+    border: solid rgb(0, 174, 255) 1px;
+    width: 398px;
+    height: 32px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .imggithub{
+    width: 20px;
+    margin-right: 20px;
   }
