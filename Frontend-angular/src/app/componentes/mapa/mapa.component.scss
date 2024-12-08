@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.search{
+    margin-top: 70px;
+    width: 350px;
+    height: 25px;
+    border: solid rgba(0, 195, 255, 0.842) 1px;
+    border-radius: 4px;
+}
+
+.imglupa{
+    width: 20px;
+    margin-right: 20px;
+}
+
+.search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
