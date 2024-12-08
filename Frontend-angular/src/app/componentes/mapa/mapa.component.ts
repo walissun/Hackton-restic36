@@ -41,8 +41,8 @@ export class MapaComponent {
       directionsRenderer.setMap(this.map);
 
       const routeRequest: google.maps.DirectionsRequest = {
-        origin: { lat: 40.7128, lng: -74.006 },
-        destination: { lat: 40.73061, lng: -73.935242 },
+        origin: { lat: -12.975392, lng: -38.501316 },
+        destination: { lat: -12.965769, lng: -38.513417 },
         travelMode: google.maps.TravelMode.DRIVING,
       };
 
