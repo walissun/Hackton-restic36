@@ -1,4 +1,9 @@
 <!-- <div id="map" style="width: 100%; height: 500px;"></div> -->
-<ng-container *ngIf="isBrowser">
-    <div id="map" style="height: 500px; width: 100%;"></div>
-  </ng-container>
+<div class="container">
+    <ng-container *ngIf="isBrowser">
+      <div id="map" style="height: 500px; width: 100%;"></div>
+    </ng-container>
+  <div class="search-container">
+    <input class="search" type="search" placeholder="informe seu destino">
+  </div>
+</div>
